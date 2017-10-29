@@ -125,7 +125,7 @@ r.onreadystatechange = function () {
   var img_node = document.getElementsByTagName('img')[0];
 
   page_elements_node.innerHTML = build_page_data(data.elements);
-  page_elements_node.style.height = img_node.height + 'px';
+  page_elements_node.getElementsByTagName('ul')[0].style.height = img_node.height + 'px';
 
   page_elements_node.addEventListener('click', (function (data, base) { return function (e) {
     var index = find_index(e.target);
@@ -136,9 +136,11 @@ r.onreadystatechange = function () {
   }})(data.elements, img_node));
 
   page_analysis_node.innerHTML = build_analysis_data(data.analysis.issues);
-  page_analysis_node.style.height = img_node.height + 'px';
+  var btn_group_node = page_analysis_node.getElementsByClassName('btn-group')[0];
+  var btn_group_rect = btn_group_node.getBoundingClientRect();
+  page_analysis_node.getElementsByTagName('ul')[0].style.height = (img_node.height - btn_group_rect.height) + 'px';
 
-  document.getElementsByClassName('btn-group')[0].addEventListener('click', function(e) {
+  btn_group_node.addEventListener('click', function(e) {
     var elt = e.target;
     if (elt.tagName == 'INPUT') {
       if (elt.checked) {

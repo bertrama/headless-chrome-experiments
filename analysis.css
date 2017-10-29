@@ -27,6 +27,9 @@ dd {
   width: 25%;
   display: inline-block;
   vertical-align: top;
+}
+
+.page-analysis ul, .page-elements ul {
   overflow: scroll;
 }
 
@@ -34,12 +37,21 @@ img {
   width: 100%;
 }
 
+section {
+  padding: 0.5rem;
+}
+
 ul {
   padding: 0.25rem;
+  list-style-type: none;
 }
 
 ul.toggle li {
   display: none;
+}
+
+header {
+  padding: 0.5rem;
 }
 
 div.error + ul.toggle li.error,
