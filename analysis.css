@@ -1,0 +1,49 @@
+dt, dd {
+  display: inline-block;
+  vertical-align: top;
+}
+
+dt {
+  width: 5%;
+}
+dd {
+  width: 95%;
+}
+
+.issue dt {
+  width: 25%;
+}
+.issue dd {
+  width: 75%;
+}
+
+.page-image {
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.page-analysis, .page-elements {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+  overflow: scroll;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  padding: 0.25rem;
+}
+
+ul.toggle li {
+  display: none;
+}
+
+div.error + ul.toggle li.error,
+div.warning + ul.toggle li.warning,
+div.notice + ul.toggle li.notice {
+  display: block;
+}

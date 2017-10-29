@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "chrome-launcher": "^0.8.1",
+    "chrome-remote-interface": "^0.25.2",
+    "http-server": "^0.10.0",
+    "puppeteer": "^0.12.0"
+  }
+}
